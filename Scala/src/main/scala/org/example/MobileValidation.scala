@@ -14,7 +14,7 @@ object MobileValidation {
       .option("delimiter", ",")
       .csv("D:/mobile/mob.csv")
 
-    val regular_exp = "^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[6789]\\d{9}$"
+      val regular_exp = "^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[6789]\\d{9}$"
 
     val validated_df = df
       .withColumn("isValidMobileNumber", regexp_extract(col("mobile")
